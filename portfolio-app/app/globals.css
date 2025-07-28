@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #D3D1CE;
+  --foreground: #090F15;
 }
 
 @theme inline {
@@ -14,21 +14,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #090F15;
+    --foreground: #D3D1CE;
   }
 }
 
 /* globals.css */
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif; /* Apply the Lora font to all headings */
   }
 }
+
 body {
   background: var(--background);
   color: var(--foreground);
