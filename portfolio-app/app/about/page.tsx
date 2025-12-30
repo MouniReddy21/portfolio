@@ -36,7 +36,9 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold text-white">About Me</h1>
           <div className="w-24 h-1 bg-amber-400 rounded-full mt-2 mb-6"></div>
           <p className="text-zinc-300 text-lg leading-relaxed">
-            I'm a Software Engineer based in Kent, Ohio, with experience building scalable, intuitive web applications and cloud-native systems. I specialize in creating performant, responsive frontends and integrating them with secure, backend architectures.
+            I am a Computer Science Graduate Student at Kent State University (GPA 4.0). With over three years of experience in Backend & Distributed Systems, my engineering philosophy is centered on Operational Excellence and Reliability.
+            
+            I specialize in bridging the gap between hardware-level precision and cloud-scale complexity. Whether I am optimizing RAG pipelines to reduce inference latency by 60% or architecting Zero-Trust security layers for cloud databases, I focus on building systems that are inherently secure, performant, and scalable.
           </p>
         </section>
 
@@ -49,17 +51,45 @@ export default function AboutPage() {
                 <Code className="text-amber-400 mr-4 mt-1" size={32} />
                 <div>
                   <h3 className="text-xl font-semibold text-white">Software Engineering</h3>
-                  <p className="text-zinc-400 mt-2">Designing scalable systems and clean APIs with strong coding practices</p>
+                  <p className="text-zinc-400 mt-2">
+                    Engineering reliable backend systems that scale from prototype to production. I design clean APIs, optimize data ingestion pipelines, and build PostgreSQL-backed platforms in Django capable of handling terabyte-scale datasets while maintaining fast analytical performance and strong data guarantees.
+                  </p>
                 </div>
               </div>
-              </div>
+            </div>
 
-              <div className="bg-zinc-900/90 p-6 rounded-lg border border-zinc-800 hover:border-amber-400 transition-colors backdrop-blur-sm">
+            <div className="bg-zinc-900/90 p-6 rounded-lg border border-zinc-800 hover:border-amber-400 transition-colors backdrop-blur-sm">
               <div className="flex items-start">
                 <Bot className="text-amber-400 mr-4 mt-1" size={32} />
                 <div>
                   <h3 className="text-xl font-semibold text-white">AI/ML Engineering</h3>
-                  <p className="text-zinc-400 mt-2">Developing ML pipelines, NLP solutions, and data-driven applications.</p>
+                  <p className="text-zinc-400 mt-2">
+                    Developing scalable ML inference pipelines and RAG systems. I focus on the infrastructure layer, optimizing vector storage, implementing fault-tolerant asynchronous processing on AWS, and enhancing model interpretability via SHAP
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-zinc-900/90 p-6 rounded-lg border border-zinc-800 hover:border-amber-400 transition-colors backdrop-blur-sm">
+              <div className="flex items-start">
+                <Bot className="text-amber-400 mr-4 mt-1" size={32} />
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Identity & Data Security</h3>
+                  <p className="text-zinc-400 mt-2">
+                    Architecting Zero-Trust layers for cloud storage. Implementing robust security protocols including AES-GCM encryption, RBAC, and HMAC to ensure data integrity in high-traffic, compliance-sensitive environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-zinc-900/90 p-6 rounded-lg border border-zinc-800 hover:border-amber-400 transition-colors backdrop-blur-sm">
+              <div className="flex items-start">
+                <Bot className="text-amber-400 mr-4 mt-1" size={32} />
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Supply Chain Mapping (Rust Belt Fibershed)</h3>
+                  <p className="text-zinc-400 mt-2">
+                    Collaborating with the Rust Belt Fibershed through the Kent State DI Hub to research and map place-based textile systems. My work focuses on identifying underutilized waste streams and designing solutions to foster collaboration between local agriculture and sustainable manufacturing.
+                  </p>
                 </div>
               </div>
             </div>

@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 export default function HomePage() {
   const [typedName, setTypedName] = useState('');
-  const fullName = 'Shreyas KV';
-  const tagline = "I love coding, coffee, and keyboards!";
+  const fullName = 'Mounika Seelam'; 
+  const tagline = "Architecting high-availability systems and mission-critical AI pipelines."; 
 
   const hasStarted = useRef(false);
 
@@ -43,7 +43,7 @@ export default function HomePage() {
            <div className="relative h-full w-full rounded-[1.8rem] overflow-hidden relative">
              <Image
                src="/profile.jpg" 
-               alt="Shreyas KV"
+               alt="Mounika Seelam"
                fill
                priority
                className="object-cover object-top hover:scale-105 transition-transform duration-500"
@@ -58,7 +58,7 @@ export default function HomePage() {
         <h1 className="text-5xl md:text-7xl font-light text-zinc-100 mb-4 drop-shadow-2xl">
           Hi, my name is{' '}
           <span className="font-semibold">
-            <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-100 to-zinc-400 bg-clip-text text-transparent">
               {typedName}
             </span>
 
@@ -71,7 +71,7 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-zinc-300 font-medium tracking-wide">
-          Software Developer
+          Software Engineer | Distributed Systems | AI Infrastructure
         </p>
         <p className="text-lg md:text-xl max-w-2xl text-zinc-400 mt-4 italic font-light">
           {tagline}

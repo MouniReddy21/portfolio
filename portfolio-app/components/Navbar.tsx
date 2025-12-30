@@ -264,7 +264,7 @@ export default function Navbar() {
       >
         <nav className="container mx-auto flex justify-between items-center px-6">
           <Link href="/" className="text-2xl font-bold text-white tracking-tighter">
-            SHREYAS
+            Mounika
           </Link>
 
           <div className="hidden md:flex space-x-8">
