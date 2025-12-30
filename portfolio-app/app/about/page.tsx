@@ -1,3 +1,5 @@
+// app/about/page.tsx
+
 import Image from 'next/image';
 import { Code, Bot, Cog, Cpu, Database, Cloud } from 'lucide-react';
 
@@ -10,11 +12,10 @@ export default function AboutPage() {
     { name: 'TensorFlow', icon: <Cpu size={32} /> },
     { name: 'SQL', icon: <Database size={32} /> },
     { name: 'AWS', icon: <Cloud size={32} /> },
-    // Add more skills...
+    // will Add more skills...
   ];
 
   return (
-    // MAIN CONTAINER: Must be relative and fill the height to contain the background
     <div className="relative min-h-full w-full">
       
       {/* BACKGROUND IMAGE CONTAINER */}
@@ -26,11 +27,9 @@ export default function AboutPage() {
           priority
           className="object-cover"
         />
-        {/* DARK OVERLAY: Adjust the 'bg-zinc-950/90' value (e.g., to /80 or /95) to fine-tune visibility */}
         <div className="absolute inset-0 bg-zinc-950/90" />
       </div>
 
-      {/* PAGE CONTENT CONTAINER: Needs z-index to sit on top */}
       <div className="relative z-10 max-w-4xl space-y-16 p-8 md:p-0">
         {/* --- About Me Section --- */}
         <section>

@@ -16,7 +16,7 @@ export default function Sidebar() {
       {/* --- Profile Section --- */}
       <div className="flex flex-col items-center text-center w-full">
         <Image
-          src="/profile.png" // Using your local image
+          src="/profile.jpg" // Using your local image
           alt="Profile Picture"
           width={120}
           height={120}

@@ -2,11 +2,11 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Lora } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
-import Footer from '@/components/Footer'; // <-- Import the new Footer
+import Footer from '@/components/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,6 +18,12 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const lora = Lora({
+  variable: '--font-lora',
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,24 +33,26 @@ export default function RootLayout({
   const isHomePage = pathname === '/';
 
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} antialiased bg-[#090F15] text-[#D3D1CE]`}
       >
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen flex flex-col">
           {isHomePage ? (
-            // Homepage Layout
+            // Homepage: Full screen, no sidebar
             <>
               <Navbar />
-              <main>{children}</main>
+              <main className="flex-grow">{children}</main>
             </>
           ) : (
-            // Inner Pages Layout
-            <div className="flex">
+            // Inner Pages: Fixed Sidebar + Content Area
+            <div className="flex flex-grow">
               <Sidebar />
-              <div className="flex flex-col w-full ml-72"> {/* Container for main content and footer */}
+              <div className="flex flex-col flex-grow md:ml-72 min-h-screen">
                 <Navbar />
-                <main className="flex-grow p-8 md:p-12 mt-16">{children}</main>
+                <main className="flex-grow p-6 md:p-12 pt-24 md:pt-28">
+                  {children}
+                </main>
                 <Footer />
               </div>
             </div>
