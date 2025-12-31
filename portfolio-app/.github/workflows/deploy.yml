@@ -27,8 +27,9 @@ jobs:
         working-directory: .
 
       - name: Check output folder
-        run: ls -la ./out
-        working-directory: .
+        run: |
+          echo "Listing ./out contents:"
+          ls -la ./out
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -36,3 +37,4 @@ jobs:
           branch: gh-pages
           folder: ./out
           token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Deploy portfolio site"
