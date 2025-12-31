@@ -6,7 +6,6 @@ import {
   Linkedin,
   Instagram,
   Mail,
-  Phone,
   MapPin,
   ShieldCheck,
   Plane,

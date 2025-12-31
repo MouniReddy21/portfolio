@@ -1,16 +1,15 @@
 // // app/about/page.tsx
 "use client"; 
 
-import { useEffect } from 'react'; // Move this import up with the others
+import { useEffect } from 'react'; 
 import Image from 'next/image';
 import { 
-  Code, Bot, Server, Cpu, Database, Cloud, 
-  ShieldCheck, Layout, Boxes, Terminal, Palette 
+  Bot, Server, Cpu, Cloud, 
+  ShieldCheck, Layout, Boxes, Palette 
 } from 'lucide-react';
 
 export default function AboutPage() {
   useEffect(() => {
-    // Check if the URL has #skills when the page loads
     if (window.location.hash === '#skills') {
       const element = document.getElementById('skills');
       if (element) {
@@ -85,7 +84,7 @@ export default function AboutPage() {
 
         {/* --- What I'm Doing Section --- */}
         <section>
-          <h2 className="text-3xl font-bold text-white mb-6">What I'm Doing</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">What I&apos;m Doing</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Software Engineering */}
             <div className="bg-zinc-900/90 p-6 rounded-lg border border-zinc-800 hover:border-amber-400/50 transition-all duration-300 backdrop-blur-md group">
@@ -154,14 +153,8 @@ export default function AboutPage() {
         </section>
 
         {/* --- Categorized Skills Section --- */}
-        <section id="skills" className="scroll-mt-24 md:scroll-mt-32 pb-20">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
-              <h2 className="text-3xl font-bold text-white">Skills</h2>
-              <p className="text-zinc-400 mt-2 text-sm max-w-xl">
-              </p>
-            </div>
-          </div>
+        <section id="skills" className="pb-20 scroll-mt-24">
+          <h2 className="text-3xl font-bold text-white mb-8">Skills</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillCategories.map((cat) => (
