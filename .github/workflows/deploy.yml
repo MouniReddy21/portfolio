@@ -20,21 +20,22 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: .
+        working-directory: ./portfolio-app
 
       - name: Build Site
         run: npm run build
-        working-directory: .
+        working-directory: ./portfolio-app
 
       - name: Check output folder
         run: |
           echo "Listing ./out contents:"
           ls -la ./out
+        working-directory: ./portfolio-app
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: ./out
+          folder: ./portfolio-app/out
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Deploy portfolio site"
