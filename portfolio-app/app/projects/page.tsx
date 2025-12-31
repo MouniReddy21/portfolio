@@ -94,10 +94,10 @@ import { ShieldCheck, AlertCircle, Dna, ScanFace, Activity, Terminal, BarChart3,
 const myProjects = [
   {
     name: 'Secure Cloud Database Proxy',
-    description: 'Architected a Zero-Trust security layer implementing AES-GCM encryption and HMAC integrity verification for secure data access over untrusted storage.',
-    image: '/projects/security-proxy.png', 
+    description: 'A zero-trust intermediary for healthcare data protection in untrusted clouds. Implements AES-GCM for confidentiality, HMAC for integrity, and Hash Chains for query completeness, featuring RBAC for PII redaction.',
+    image: '/security-proxy.png', 
     tags: ['Security', 'AES-GCM', 'RBAC', 'Python'],
-    link: '#', 
+    link: 'https://github.com/MouniReddy21/SecureCloud', 
     icon: <ShieldCheck className="text-amber-400" size={20} />
   },
   {
@@ -105,34 +105,34 @@ const myProjects = [
     description: 'Engineered a production ML service achieving 98.6% accuracy in detecting job fraud across 29K+ records. Deployed via CI/CD with sub-second inference latency.',
     details:
     'Trained XGBoost and Logistic Regression models on 29K+ records. Built feature pipelines, tuned hyperparameters, and deployed via CI/CD with sub-second inference latency.',
-    image: '/projects/scamguard.png',
+    image: '/scamguard.jpeg',
     tags: ['ML', 'Flask', 'React', 'CI/CD'],
-    link: '#',
+    link: 'https://github.com/MouniReddy21/ScamGuard',
     icon: <AlertCircle className="text-amber-400" size={20} />
   },
   {
     name: 'Multi-User Blogging Platform',
     description:
       'Built a full-stack blogging platform with secure authentication, role-based post management, image uploads, and threaded comments. Designed RESTful routes and normalized schemas for scalable user-generated content.',
-    image: '/projects/blog-platform.png',
+    image: '/blog-platform.png',
     tags: ['Flask', 'SQLite', 'Auth', 'MVC', 'Full Stack'],
-    link: 'https://github.com/yourusername/multi-user-blog',
+    link: 'https://github.com/MouniReddy21/multi-user-blog',
     icon: <PenSquare className="text-amber-400" size={20} />
   },
   {
     name: 'CodeTheGenome',
     description:   'Built a distributed ML inference pipeline for terabyte-scale genomic datasets, achieving 91% ROC-AUC and reducing processing time from hours to minutes through query compilation and vectorized execution.',
-    image: '/projects/genomics.png',
+    image: '/genomics.png',
     tags: ['Distributed Systems', 'PyTorch', 'HPC'],
-    link: '#',
+    link: 'https://github.com/MouniReddy21/CodeTheGenome',
     icon: <Dna className="text-amber-400" size={20} />
   },
   {
     name: 'Facial Expression CNN',
     description: 'CNN-based classifier recognizing 7 emotional categories with 81.5% accuracy. Optimized via data augmentation and L2 regularization to minimize overfitting.',
-    image: '/projects/cnn-facial.png',
+    image: '/cnn-facial.jpeg',
     tags: ['CNN', 'Computer Vision', 'TensorFlow'],
-    link: '#',
+    link: 'https://github.com/MouniReddy21/Facial-Expression-Recognition-using-CNN',
     icon: <ScanFace className="text-amber-400" size={20} />
   },
   {

@@ -83,24 +83,63 @@ body {
 
 .hero-bg-layer {
   position: absolute;
-  inset: -5%; /* overfill to prevent edges */
+  inset: -10%;
   background-image: url('/hero-bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  animation: bg-drift 10s ease-in-out infinite;
-  will-change: background-position;
+  animation: bg-drift-slow 20s ease-in-out infinite;
+  opacity: 0.6;
 }
 
-@keyframes bg-drift {
-  0% {
-    background-position: 50% 50%;
-  }
-  50% {
-    background-position: 50% 45%;
-  }
-  100% {
-    background-position: 50% 50%;
-  }
+.hero-bg-layer::after {
+  content: '';
+  position: absolute;
+  inset: -10%;
+  background-image: url('/hero-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bg-drift-reverse 30s linear infinite;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+@keyframes bg-drift-slow {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-20px, -30px) scale(1.05); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes bg-drift-reverse {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(30px, 20px) scale(1.03); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.hero-particles {
+  will-change: transform, opacity;
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+
+  background-size: 160px 160px;
+
+  animation:
+    particles-float 120s linear infinite,
+    particle-twinkle 10s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes particles-float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
+}
+
+@keyframes particle-twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
 }

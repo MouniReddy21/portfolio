@@ -26,12 +26,16 @@ export default function HomePage() {
 
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center p-4 overflow-hidden space-y-8">
+    <div className="relative w-full flex-grow min-h-[100svh] overflow-hidden flex flex-col justify-center items-center ...">
       {/* Background Image Container */}
       <div className="absolute inset-0 -z-20 overflow-hidden">
+        {/* Base drifting background */}
         <div className="hero-bg-layer" />
-        <div className="absolute inset-0 bg-zinc-950/80" />
+        <div className="hero-particles pointer-events-none" />
+        <div className="absolute inset-0 bg-zinc-950/60" />
+
       </div>
+
       {/* Holographic Image Container */}
       <div className="relative z-10 group">
         {/* 1. The pulsing glow ring behind the image */}
