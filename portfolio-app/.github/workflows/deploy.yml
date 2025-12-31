@@ -8,9 +8,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout code
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # Step 2: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -18,17 +20,20 @@ jobs:
           cache: 'npm'
           cache-dependency-path: ./portfolio-app/package.json
 
+      # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
         working-directory: ./portfolio-app
 
-      - name: Build and Export
-        run: |
-          npm run build
+      # Step 4: Build site (Next.js 13+ automatically outputs static files)
+      - name: Build Site
+        run: npm run build
         working-directory: ./portfolio-app
 
-      - name: Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./portfolio-app/out
-          branch: gh-pages
+          branch: gh-pages          # target branch
+          folder: ./portfolio-app/out # folder with static HTML
+          token: ${{ secrets.GITHUB_TOKEN }}
