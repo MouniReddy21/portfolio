@@ -26,6 +26,9 @@ jobs:
         run: npm run build
         working-directory: ./portfolio-app
 
+      - name: Create .nojekyll
+        run: touch ./portfolio-app/out/.nojekyll
+
       - name: Check output folder
         run: |
           echo "Listing ./out contents:"
