@@ -1,3 +1,5 @@
+// // app/contact/page.tsx
+
 import Image from 'next/image';
 
 export default function ContactPage() {
@@ -6,7 +8,7 @@ export default function ContactPage() {
       
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/pages-bg.svg" 
+          src="/portfolio/pages-bg.svg" 
           alt="Contact Page Background"
           fill
           priority

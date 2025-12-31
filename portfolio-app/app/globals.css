@@ -1,66 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #D3D1CE;
-  --foreground: #090F15;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* ------------------ BASE ------------------ */
+
+:root {
+  --background: #090F15;
+  --foreground: #D3D1CE;
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
-
-@media (prefers-color-scheme: dark) {
+/* ------------------ TYPOGRAPHY ------------------ */
+@layer base {
   :root {
-    --background: #090F15;
-    --foreground: #D3D1CE;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
   }
 }
+@layer base {
+  body {
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+  }
 
-/* globals.css */
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+  code, pre {
+    font-family: var(--font-geist-mono), monospace;
+  }
+}
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif; /* Apply the Lora font to all headings */
+    @apply font-serif;
   }
-}
 
-@layer base {
   html {
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
   }
-}
-
-/* Ensure the scroll margin accounts for your FIXED navbar */
-#skills {
-  scroll-margin-top: 100px; /* Adjust this value based on your Navbar height */
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.homepage-bg {
-  background-color: #090F15; /* Brown background for the landing page */
 }
 
 .wave-cursor {
   display: inline-block;
-  animation: wave-animation 10s infinite;
+  animation: wave-animation 8s infinite;
   transform-origin: 70% 70%;
   margin-left: 0.5rem;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
 }
 
 @keyframes wave-animation {
@@ -74,33 +57,13 @@ body {
   100% { transform: rotate( 0.0deg) }
 }
 
-@layer utilities {
-  @keyframes pulse-ring {
-    0% {
-      transform: scale(0.95);
-      opacity: 0.7;
-    }
-    50% {
-      transform: scale(1.1);
-      opacity: 0.3;
-    }
-    100% {
-      transform: scale(0.95);
-      opacity: 0.7;
-    }
-  }
 
-  .animate-pulse-slow {
-    /* animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; */
-      animation: pulse-ring 6s ease-in-out infinite;
-
-  }
-}
+/* ------------------ HERO BACKGROUND ------------------ */
 
 .hero-bg-layer {
   position: absolute;
   inset: -10%;
-  background-image: url('/hero-bg.svg');
+  background-image: url('/portfolio/hero-bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,7 +75,7 @@ body {
   content: '';
   position: absolute;
   inset: -10%;
-  background-image: url('/hero-bg.svg');
+  background-image: url('/portfolio/hero-bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,31 +85,28 @@ body {
 }
 
 @keyframes bg-drift-slow {
-  0% { transform: translate(0px, 0px) scale(1); }
+  0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(-20px, -30px) scale(1.05); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 @keyframes bg-drift-reverse {
-  0% { transform: translate(0px, 0px) scale(1); }
+  0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(30px, 20px) scale(1.03); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
+/* ------------------ PARTICLES ------------------ */
+
 .hero-particles {
-  will-change: transform, opacity;
   position: absolute;
   inset: 0;
-
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
-
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1.5px);
   background-size: 160px 160px;
-
   animation:
     particles-float 120s linear infinite,
     particle-twinkle 10s ease-in-out infinite;
-
   pointer-events: none;
 }
 

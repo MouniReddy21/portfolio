@@ -1,91 +1,4 @@
-// import Image from 'next/image';
-// import Link from 'next/link';
-// import { ArrowRight } from 'lucide-react';
-
-// const myProjects = [
-//   {
-//     name: 'ClassEdge',
-//     image: '/projects/class-edge.png', 
-//     tags: ['Django', 'Web Dev'],
-//     link: '#', // Link to the project
-//   },
-//   {
-//     name: 'Taylrd',
-//     image: '/projects/taylrd.png',
-//     tags: ['Flask', 'ML'],
-//     link: '#',
-//   },
-//   {
-//     name: 'Flight Delay',
-//     image: '/projects/flight-delay.png',
-//     tags: ['Analytics', 'ML'],
-//     link: '#',
-//   },
-// ];
-
-// export default function ProjectsPage() {
-//   return (
-//     <div className="relative min-h-full w-full">
-      
-//       {/* BACKGROUND IMAGE CONTAINER*/}
-//       <div className="fixed inset-0 -z-10">
-//         <Image
-//           src="/pages-bg.svg" 
-//           alt="Projects Page Background"
-//           fill
-//           priority
-//           className="object-cover"
-//         />
-//         <div className="absolute inset-0 bg-zinc-950/90" />
-//       </div>
-
-//       {/* PAGE CONTENT CONTAINER:*/}
-//       <div className="relative z-10 max-w-6xl space-y-8 p-8 md:p-0 mx-auto">
-//         <h1 className="text-4xl font-bold text-white mb-4">Projects</h1>
-//         <div className="w-24 h-1 bg-amber-400 rounded-full mb-12"></div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {myProjects.map((project) => (
-//             // PROJECT CARD
-//             <div 
-//               key={project.name} 
-//               className="bg-zinc-900/90 rounded-lg overflow-hidden group border border-zinc-800 backdrop-blur-md shadow-xl transition-all hover:border-amber-400/50"
-//             >
-//               <div className="relative h-48 w-full border-b border-zinc-800">
-//                 <Image
-//                   src={project.image}
-//                   alt={project.name}
-//                   fill
-//                   style={{ objectFit: 'cover' }}
-//                 />
-//               </div>
-//               <div className="p-6">
-//                 <h3 className="text-2xl font-semibold text-white group-hover:text-amber-400 transition-colors">
-//                   {project.name}
-//                 </h3>
-//                 <div className="flex flex-wrap gap-2 mt-4">
-//                   {project.tags.map((tag) => (
-//                     <span 
-//                       key={tag} 
-//                       className="bg-zinc-800 text-zinc-300 text-xs font-medium px-2.5 py-1 rounded-full border border-zinc-700"
-//                     >
-//                       {tag}
-//                     </span>
-//                   ))}
-//                 </div>
-//                 <Link href={project.link}>
-//                   <div className="absolute top-4 right-4 bg-zinc-900/90 p-2 rounded-full border border-zinc-700 transform scale-0 group-hover:scale-100 transition-all duration-300 hover:bg-amber-400">
-//                     <ArrowRight className="text-white group-hover:text-zinc-950 h-5 w-5" />
-//                   </div>
-//                 </Link>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+// // app/projects/page.tsx
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -95,7 +8,7 @@ const myProjects = [
   {
     name: 'Secure Cloud Database Proxy',
     description: 'A zero-trust intermediary for healthcare data protection in untrusted clouds. Implements AES-GCM for confidentiality, HMAC for integrity, and Hash Chains for query completeness, featuring RBAC for PII redaction.',
-    image: '/security-proxy.png', 
+    image: '/portfolio/security-proxy.png', 
     tags: ['Security', 'AES-GCM', 'RBAC', 'Python'],
     link: 'https://github.com/MouniReddy21/SecureCloud', 
     icon: <ShieldCheck className="text-amber-400" size={20} />
@@ -105,7 +18,7 @@ const myProjects = [
     description: 'Engineered a production ML service achieving 98.6% accuracy in detecting job fraud across 29K+ records. Deployed via CI/CD with sub-second inference latency.',
     details:
     'Trained XGBoost and Logistic Regression models on 29K+ records. Built feature pipelines, tuned hyperparameters, and deployed via CI/CD with sub-second inference latency.',
-    image: '/scamguard.jpeg',
+    image: '/portfolio/scamguard.jpeg',
     tags: ['ML', 'Flask', 'React', 'CI/CD'],
     link: 'https://github.com/MouniReddy21/ScamGuard',
     icon: <AlertCircle className="text-amber-400" size={20} />
@@ -114,7 +27,7 @@ const myProjects = [
     name: 'Multi-User Blogging Platform',
     description:
       'Built a full-stack blogging platform with secure authentication, role-based post management, image uploads, and threaded comments. Designed RESTful routes and normalized schemas for scalable user-generated content.',
-    image: '/blog-platform.png',
+    image: '/portfolio/blog-platform.png',
     tags: ['Flask', 'SQLite', 'Auth', 'MVC', 'Full Stack'],
     link: 'https://github.com/MouniReddy21/multi-user-blog',
     icon: <PenSquare className="text-amber-400" size={20} />
@@ -122,7 +35,7 @@ const myProjects = [
   {
     name: 'CodeTheGenome',
     description:   'Built a distributed ML inference pipeline for terabyte-scale genomic datasets, achieving 91% ROC-AUC and reducing processing time from hours to minutes through query compilation and vectorized execution.',
-    image: '/genomics.png',
+    image: '/portfolio/genomics.png',
     tags: ['Distributed Systems', 'PyTorch', 'HPC'],
     link: 'https://github.com/MouniReddy21/CodeTheGenome',
     icon: <Dna className="text-amber-400" size={20} />
@@ -130,7 +43,7 @@ const myProjects = [
   {
     name: 'Facial Expression CNN',
     description: 'CNN-based classifier recognizing 7 emotional categories with 81.5% accuracy. Optimized via data augmentation and L2 regularization to minimize overfitting.',
-    image: '/cnn-facial.jpeg',
+    image: '/portfolio/cnn-facial.jpeg',
     tags: ['CNN', 'Computer Vision', 'TensorFlow'],
     link: 'https://github.com/MouniReddy21/Facial-Expression-Recognition-using-CNN',
     icon: <ScanFace className="text-amber-400" size={20} />
@@ -138,7 +51,7 @@ const myProjects = [
   {
     name: 'Task Tracker CLI System',
     description:   'High-performance Java CLI application supporting thousands of concurrent operations through optimized data structures and efficient file-based persistence.',
-    image: '/task-tracker.png',
+    image: '/portfolio/task-tracker.png',
     tags: ['Java', 'OOD', 'Concurrency', 'Systems'],
     link: 'https://github.com/MouniReddy21/TaskTrackCLI',
     icon: <Terminal className="text-amber-400" size={20} />
@@ -146,7 +59,7 @@ const myProjects = [
   {
     name: 'ADL Unsupervised Recognition',
     description: 'Applied unsupervised learning (Agglomerative Clustering & GMM) to recognize Activities of Daily Living in smart homes using binary sensor data and PCA.',
-    image: '/adl-home.jpeg',
+    image: '/portfolio/adl-home.jpeg',
     tags: ['Unsupervised ML', 'PCA', 'Clustering'],
     link: 'https://github.com/MouniReddy21/ADL-Recognition-Using-Unsupervised-Learning',
     icon: <Activity className="text-amber-400" size={20} />
@@ -154,7 +67,7 @@ const myProjects = [
   {
     name: 'Interactive Cereal Visualizer',
     description: 'Built a visual analytics system using D3.js to explore nutritional patterns. Features PCA-based clustering, interactive dendrograms, and manufacturer comparisons to support multi-dimensional analysis.',
-    image: '/cereal-viz.jpeg',
+    image: '/portfolio/cereal-viz.jpeg',
     tags: ['D3.js', 'PCA', 'Data Visualization'],
     link: 'https://github.com/MouniReddy21/cereal_visualization',
     demo: 'https://mounireddy21.github.io/cereal_visualization/',
@@ -169,7 +82,7 @@ export default function ProjectsPage() {
       {/* BACKGROUND IMAGE CONTAINER */}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/pages-bg.svg" 
+          src="/portfolio/pages-bg.svg" 
           alt="Projects Page Background"
           fill
           priority

@@ -1,4 +1,4 @@
-
+// portfolio-app/app/page.tsx
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -26,14 +26,13 @@ export default function HomePage() {
 
 
   return (
-    <div className="relative w-full flex-grow min-h-[100svh] overflow-hidden flex flex-col justify-center items-center ...">
+    <div className="relative w-full flex-grow min-h-[100svh] overflow-hidden flex flex-col justify-center items-center">
       {/* Background Image Container */}
       <div className="absolute inset-0 -z-20 overflow-hidden">
         {/* Base drifting background */}
         <div className="hero-bg-layer" />
         <div className="hero-particles pointer-events-none" />
-        <div className="absolute inset-0 bg-zinc-950/60" />
-
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/50 to-zinc-950/80" />
       </div>
 
       {/* Holographic Image Container */}
@@ -46,7 +45,7 @@ export default function HomePage() {
            {/* 3. The actual image */}
            <div className="relative h-full w-full rounded-[1.8rem] overflow-hidden relative">
              <Image
-               src="/profile.jpg" 
+               src="/portfolio/profile.jpg" 
                alt="Mounika Seelam"
                fill
                priority
@@ -56,7 +55,6 @@ export default function HomePage() {
         </div>
       </div>
       {/* ---------------------------------------- */}
-
 
       <div className="z-10 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-light text-zinc-100 mb-4 drop-shadow-2xl">

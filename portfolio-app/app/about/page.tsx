@@ -61,7 +61,7 @@ export default function AboutPage() {
       {/* BACKGROUND IMAGE CONTAINER */}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/pages-bg.svg"
+          src="/portfolio/pages-bg.svg"
           alt="About Page Background"
           fill
           priority
