@@ -30,6 +30,17 @@
   }
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth !important;
+  }
+}
+
+/* Ensure the scroll margin accounts for your FIXED navbar */
+#skills {
+  scroll-margin-top: 100px; /* Adjust this value based on your Navbar height */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
