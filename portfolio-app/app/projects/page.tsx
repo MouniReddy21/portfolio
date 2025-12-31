@@ -138,26 +138,26 @@ const myProjects = [
   {
     name: 'Task Tracker CLI System',
     description:   'High-performance Java CLI application supporting thousands of concurrent operations through optimized data structures and efficient file-based persistence.',
-    image: '/projects/task-tracker.png',
+    image: '/task-tracker.png',
     tags: ['Java', 'OOD', 'Concurrency', 'Systems'],
-    link: '#',
+    link: 'https://github.com/MouniReddy21/TaskTrackCLI',
     icon: <Terminal className="text-amber-400" size={20} />
   },
   {
     name: 'ADL Unsupervised Recognition',
     description: 'Applied unsupervised learning (Agglomerative Clustering & GMM) to recognize Activities of Daily Living in smart homes using binary sensor data and PCA.',
-    image: '/projects/adl-home.png',
+    image: '/adl-home.jpeg',
     tags: ['Unsupervised ML', 'PCA', 'Clustering'],
-    link: '#',
+    link: 'https://github.com/MouniReddy21/ADL-Recognition-Using-Unsupervised-Learning',
     icon: <Activity className="text-amber-400" size={20} />
   },
   {
     name: 'Interactive Cereal Visualizer',
     description: 'Built a visual analytics system using D3.js to explore nutritional patterns. Features PCA-based clustering, interactive dendrograms, and manufacturer comparisons to support multi-dimensional analysis.',
-    image: '/projects/cereal-viz.png',
+    image: '/cereal-viz.jpeg',
     tags: ['D3.js', 'PCA', 'Data Visualization'],
-    link: 'https://github.com/yourname/cereal-visualizer',
-    demo: 'https://your-demo-url.com',
+    link: 'https://github.com/MouniReddy21/cereal_visualization',
+    demo: 'https://mounireddy21.github.io/cereal_visualization/',
     icon: <BarChart3 className="text-amber-400" size={20} />
   }
 ];
