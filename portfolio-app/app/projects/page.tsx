@@ -89,7 +89,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, AlertCircle, Dna, ScanFace, Activity, Terminal, BarChart3, PenSquare } from 'lucide-react';
+import { ShieldCheck, AlertCircle, Dna, ScanFace, Activity, Terminal, BarChart3, PenSquare } from 'lucide-react';
 
 const myProjects = [
   {
@@ -103,6 +103,8 @@ const myProjects = [
   {
     name: 'ScamGuard: Fraud Detection',
     description: 'Engineered a production ML service achieving 98.6% accuracy in detecting job fraud across 29K+ records. Deployed via CI/CD with sub-second inference latency.',
+    details:
+    'Trained XGBoost and Logistic Regression models on 29K+ records. Built feature pipelines, tuned hyperparameters, and deployed via CI/CD with sub-second inference latency.',
     image: '/projects/scamguard.png',
     tags: ['ML', 'Flask', 'React', 'CI/CD'],
     link: '#',
@@ -179,7 +181,7 @@ export default function ProjectsPage() {
       {/* PAGE CONTENT CONTAINER */}
       <div className="relative z-10 max-w-6xl space-y-8 p-8 md:p-0 mx-auto pb-20">
         <div className="flex flex-col gap-2">
-          <h1 className="text-4xl font-bold text-white">Technical Projects</h1>
+          <h1 className="text-4xl font-bold text-white">Projects</h1>
           <div className="w-24 h-1 bg-amber-400 rounded-full mb-4"></div>
           <p className="text-zinc-400 max-w-2xl">
             A showcase of my work in Distributed Systems, Security, and Machine Learning, focused on scalability, reliability, and precision.
@@ -211,15 +213,30 @@ export default function ProjectsPage() {
                 <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
                   {project.name}
                 </h3>
-                
-                <p className="text-sm text-zinc-400 leading-relaxed line-clamp-3">
-                  {project.description}
-                </p>
+
+                {/* Description with smooth expand on hover */}
+                <div
+                  className="
+                    overflow-hidden
+                    max-h-14
+                    opacity-90
+                    transition-all
+                    duration-500
+                    ease-in-out
+                    group-hover:max-h-40
+                    group-hover:opacity-100
+                    max-md:max-h-none
+                  "
+                >
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
+                    <span
+                      key={tag}
                       className="bg-zinc-800/50 text-zinc-300 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-zinc-700/50"
                     >
                       {tag}
