@@ -154,8 +154,8 @@ export default function AboutPage() {
 
         {/* --- Categorized Skills Section --- */}
         <section id="skills" className="pb-20 scroll-mt-24">
-          <h2 className="text-3xl font-bold text-white mb-8">Skills</h2>
-
+          <h2 className="text-3xl font-bold text-white mb-0">Skills</h2>
+          <div className="w-24 h-1 bg-amber-400 rounded-full mt-0 mb-6"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillCategories.map((cat) => (
               <div 

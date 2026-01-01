@@ -50,7 +50,7 @@ export default function RootLayout({
               <Sidebar />
               <div className="flex flex-col flex-grow md:ml-72 min-h-screen">
                 <Navbar />
-                <main className="flex-grow p-6 md:p-12 pt-24 md:pt-28">
+                <main className="flex-grow p-6 md:p-12 pt-20 md:pt-20">
                   {children}
                 </main>
                 <Footer />
